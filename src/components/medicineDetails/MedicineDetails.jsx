@@ -37,7 +37,7 @@ const MedicineDetails = ({medicine,setLoading,loading}) => {
         available : available
       };
   
-      const response = await fetch(`http://localhost:4000/api/medicines/${medicine._id}`, {
+      const response = await fetch(`https://vitalincbackend.vercel.app/api/medicines/${medicine._id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ const MedicineDetails = ({medicine,setLoading,loading}) => {
         try {
             
             const response = await fetch(
-              `http://localhost:4000/api/shops/${medicine.shop_id}`,
+              `https://vitalincbackend.vercel.app/api/shops/${medicine.shop_id}`,
               {
                 headers: {
                   Authorization: `Bearer ${user.token}`,
@@ -105,7 +105,7 @@ const MedicineDetails = ({medicine,setLoading,loading}) => {
             return
         }
 
-        const response = await fetch('http://localhost:4000/api/medicines/' +medicine._id, {
+        const response = await fetch('https://vitalincbackend.vercel.app/api/medicines/' +medicine._id, {
             method: 'DELETE',
             headers:{
                 'Authorization': `Bearer ${user.token}`

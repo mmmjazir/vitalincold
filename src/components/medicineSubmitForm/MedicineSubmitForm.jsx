@@ -35,7 +35,7 @@ const MedicineSubmitForm = ({shop_id}) => {
   
        const medicine = {medicinename,medicinedetails,available,price,shop_id}
 
-       const response = await fetch('http://localhost:4000/api/medicines',{
+       const response = await fetch('https://vitalincbackend.vercel.app/api/medicines',{
          method:'POST',
          headers:{
             'Content-Type': 'application/json',

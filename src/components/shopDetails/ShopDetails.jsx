@@ -36,7 +36,7 @@ const ShopDetails = ({shop, setShowForm, setSelectedShopId}) => {
           address: editedAddress,
         };
     
-        const response = await fetch(`http://localhost:4000/api/shops/${shop._id}`, {
+        const response = await fetch(`https://vitalincbackend.vercel.app/api/shops/${shop._id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const ShopDetails = ({shop, setShowForm, setSelectedShopId}) => {
         }
 
 
-        const response = await fetch('http://localhost:4000/api/shops/' +shop._id, {
+        const response = await fetch('https://vitalincbackend.vercel.app/api/shops/' +shop._id, {
             method: 'DELETE',
             headers:{
                 'Authorization': `Bearer ${user.token}`
@@ -87,7 +87,7 @@ const ShopDetails = ({shop, setShowForm, setSelectedShopId}) => {
 
      
          const deleteMedicine = async (medicineId) => {
-            const response = await fetch('http://localhost:4000/api/medicines/' + medicineId, {
+            const response = await fetch('https://vitalincbackend.vercel.app/api/medicines/' + medicineId, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${user.token}`

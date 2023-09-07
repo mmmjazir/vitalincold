@@ -25,7 +25,7 @@ const Profile = () => {
 
   useEffect(() => {
     const fetchShops = async ()=>{
-      const response = await fetch('http://localhost:4000/api/shops', {
+      const response = await fetch('https://vitalincbackend.vercel.app/api/shops', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -59,7 +59,7 @@ const Profile = () => {
     const fetchMedicines = async ()=>{
       if(medShopIds && medShopIds.length > 0){
       for (const shopId of medShopIds) {
-        const response = await fetch(`http://localhost:4000/api/medicines?shop_id=${shopId}`, {
+        const response = await fetch(`https://vitalincbackend.vercel.app/api/medicines?shop_id=${shopId}`, {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }

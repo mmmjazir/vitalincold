@@ -18,7 +18,7 @@ const Medicine = () => {
     useEffect(() => {
         const fetchMedicinesForAll = async ()=>{
           
-          const response = await fetch(`http://localhost:4000/api/medicines/${id}`, {
+          const response = await fetch(`https://vitalincbackend.vercel.app/api/medicines/${id}`, {
             headers: {
               'Authorization': `Bearer ${user.token}`
             }
@@ -45,7 +45,7 @@ const Medicine = () => {
     async function fetchShopsForAll() {
       if (medicines && medicines.shop_id) { // Check if medicines and shop_id are defined
         try {
-          const response = await fetch(`http://localhost:4000/api/shops/${medicines.shop_id}`, {
+          const response = await fetch(`https://vitalincbackend.vercel.app/api/shops/${medicines.shop_id}`, {
             headers: {
               'Authorization': `Bearer ${user.token}`
             }

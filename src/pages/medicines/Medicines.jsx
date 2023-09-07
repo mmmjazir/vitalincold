@@ -17,7 +17,7 @@ const Medicines = () => {
     
 
         const fetchMedicinesForAll = async ()=>{
-          const response = await fetch('http://localhost:4000/api/medicines/public', {
+          const response = await fetch('https://vitalincbackend.vercel.app/api/medicines/public', {
             headers: {
               'Authorization': `Bearer ${user.token}`
             }
