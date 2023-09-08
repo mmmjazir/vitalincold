@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useMedicineContext } from "../../hooks/useMedicineContext";
@@ -18,7 +19,7 @@ const Medicines = () => {
 
   useEffect(() => {
     const fetchMedicinesForAll = async () => {
-      const response = await fetch("http://localhost:4000/api/medicines/public", {
+      const response = await fetch("https://vitalincbackend.vercel.app/api/medicines/public", {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
@@ -42,7 +43,7 @@ const Medicines = () => {
         const medicinesWithShopDetails = await Promise.all(
           medicines.map(async (medicine) => {
             const shopResponse = await fetch(
-              `http://localhost:4000/api/shops/${medicine.shop_id}`,
+              `https://vitalincbackend.vercel.app/api/shops/${medicine.shop_id}`,
               {
                 headers: {
                   Authorization: `Bearer ${user.token}`,
