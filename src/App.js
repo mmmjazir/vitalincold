@@ -28,9 +28,9 @@ function App() {
 
              <Route path='/profile' element={user && userRole == 'seller' ? <Profile/> : <Navigate to='/' /> } />
          
-            <Route path='/signup' element={!user ? <Signup/> : <Navigate to='/' /> } />
+            <Route path='/signup' element={!user ? <Signup/> : <Navigate to='/medicines' /> } />
          
-            <Route path='/login' element={!user ? <Login/> : <Navigate  to='/' /> } />
+            <Route path='/login' element={!user ? <Login/> : <Navigate  to='/medicines' /> } />
           </Routes>
 
        </div>
