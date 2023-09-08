@@ -18,7 +18,7 @@ const ShopSubmitForm = ({setIsLoading}) => {
       setTimeout(() => {
         setSuccessMessage('');
         setIsLoading(false)
-      }, 3000);
+      }, 1500);
     };
    const handleSubmit = async (e)=>{
       e.preventDefault()
