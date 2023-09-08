@@ -354,4 +354,62 @@ a{
   }
 }
 
+/* CSS for the search bar container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* CSS for the search input */
+.search-bar input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* CSS for the search bar container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* CSS for the search input */
+.search-bar input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* CSS for the search button */
+.search-bar button {
+  padding: 10px 20px;
+  background-color: var(--primary); /* Use your primary color here */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* CSS for the clear search button (shown when in search mode) */
+.search-bar button:nth-child(3) {
+  background-color: #dc3545; /* Customize the background color */
+  color: #fff;
+}
+
+/* CSS for the clear search button (hidden when not in search mode) */
+.search-bar button:nth-child(3) {
+  display: none;
+}
+
+
+
  
