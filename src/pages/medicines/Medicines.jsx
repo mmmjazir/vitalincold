@@ -104,6 +104,7 @@ const Medicines = () => {
       </div>
        }
       {/* State selection dropdown */}
+     {user &&
       <div>
         <select value={selectedState} onChange={(e) => setSelectedState(e.target.value)}>
           <option value="">All States</option>
@@ -135,6 +136,7 @@ const Medicines = () => {
           <option value="tripura">Tripura</option>
         </select>
       </div>
+     }
 
       {/* Medicines list */}
       <div className="card-container">
@@ -182,7 +184,7 @@ const Medicines = () => {
             ))
           ) : (
             // No medicines available
-            <p>No medicines available.</p>
+           user && <p>No medicines available.</p>
           )
         )}
       </div>
