@@ -138,7 +138,7 @@ const Profile = () => {
           )
         ) : (
           <>
-          <p>No Medicines Created in Your Account.</p>
+          <p>You Don't Create medicines In Your Account.</p>
           </>
         ))}
 
