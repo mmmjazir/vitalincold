@@ -25,7 +25,7 @@ const Profile = () => {
 
   useEffect(() => {
     const fetchShops = async ()=>{
-      const response = await fetch(`https://vitalincbackend.vercel.app/api/shops?user_id=${user.email}`, {
+      const response = await fetch('https://vitalincbackend.vercel.app/api/shops', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
