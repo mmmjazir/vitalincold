@@ -129,9 +129,11 @@ const Profile = () => {
      {showForm === "medicinedetails" &&
      (medicines && medicines.length > 0 ? (
           medicines.map((medicine) => (
-          
+          medicine.shop_id == shops._id ? (
           <MedicineDetails  key={medicine._id}  medicine={medicine} setLoading={setLoading} loading={loading} />  
-          
+           ):(
+            <p>You Don't Create medicines In Your Account.</p>
+          )
           )
           )
         ) : (
